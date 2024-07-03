@@ -69,7 +69,8 @@ Any classification model used in this exercise (but the baseline Dummy of course
 #### Next steps
 
 - Try more classification models.
-- Training and prediction runtime and memory profiling.
+- Include training and prediction runtime and memory profiling.
+- Train with N-most important features and compare fidelity of such models with models trained on the full dataset. 
 - Recalculate all data for duplicated URL entries from existing intermediate data, like `URLLength`, etc.
 
 #### Outline of project
