@@ -59,12 +59,12 @@ CRISP-DM Framework
 Generally, the dataset at first sight looks very promising. Authors extracted a lot of fine grained features from their sample URLs and HTML content.
 
 During EDA phase a few surprising discoveries have been made however:
-- There are 850 "hidden" duplicated URLs in the dataset probably caused by author's bugs in feature extraction process and software.
-- From a random sample of 5 supposedly phishing URLs only 2 were found on phishtank.org service.
+- There are 425 "hidden" duplicated URLs in the dataset probably caused by author's bugs in feature extraction process and software tools they developed.
+- From a random sample of 5 supposedly phishing URLs only 2 were found on phishtank.org service. Ideally, we would need to cross validate them with other phishing URL providers.
 
-Any classification model trained on the dataset is literally perfect regardless whether using default hyper-parameters or with tuning. Models demonstrate incredible accuracy and recall scores. Too ideal to be true?
+Any classification model trained on the dataset is literally perfect regardless whether using default hyper-parameters or with hyper-parameter tuning. Models demonstrate incredible accuracy and recall scores. Too ideal to be true?...
 
-Any classification model used in this exercise (but the baseline Dummy of course) can handle the task of URL qualification just fine. 
+Any classification model used in this exercise (excluding the baseline Dummy Classifier of course) can handle the task of URL qualification just fine. 
 
 #### Next steps
 
