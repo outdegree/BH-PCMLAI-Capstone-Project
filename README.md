@@ -56,27 +56,27 @@ CRISP-DM Framework
 
 #### Results
 
-Generally, the dataset at first sight looks very promising. Authors extracted a lot of fine grained features from their sample URLs and HTML content.
+Generally, the dataset at first sight looks very promising. Authors extracted a lot of "fine grained
+" features from their sample URLs and HTML content. 54 features to be precise.
 
 During EDA phase a few surprising discoveries have been made however:
-- There are 425 "hidden" duplicated URLs in the dataset probably caused by author's bugs in feature extraction process and software tools they developed.
-- From a random sample of 5 supposedly phishing URLs only 2 were found on phishtank.org service. Ideally, we would need to cross validate them with other phishing URL providers.
+- There are 425 "hidden" duplicated URLs in the dataset probably caused by bugs in feature extraction process and software tools the original authors developed.
+- From a random sample of 5 supposedly phishing URLs only 2 were found on `phishtank.org` service. Ideally, we would need to cross validate them with other phishing URL providers.
+- Quite a bit of the "fine grained" features extracted from the HTML code are actually impractical. Technically speaking their variance is either zero or very low. They had to be dropped. Hence, 54 features became 38 features.
+
+The models were trained to minimize False Negatives (FN) -- classifying a malicious URL as benign. We want the users to be protected against security threats coming from malicious URLs. Hitting a False Positive (FP) -- classifying a benign URL as malicious is acceptable although it compromises system's UX. UX and Security simply lay on different sides of the spectrum. Building Security systems is a balancing act between secure users and happy users.
 
 Any classification model trained on the dataset is literally perfect regardless whether using default hyper-parameters or with hyper-parameter tuning. Models demonstrate incredible accuracy and recall scores. Too ideal to be true?...
 
-Any classification model used in this exercise (excluding the baseline Dummy Classifier of course) can handle the task of URL qualification just fine. 
+Any classification model used in this exercise (excluding the baseline Dummy Classifier of course) can handle the task of URL qualification just fine. However Logistic Regression and SVC are best contenders for possible deployment with low False Negatives and reasonable training time.
 
 #### Next steps
 
-- Try more classification models.
-- Include training and prediction runtime and memory profiling.
-- Train with N-most important features and compare fidelity of such models with models trained on the full dataset. 
-- Recalculate all data for duplicated URL entries from existing intermediate data, like `URLLength`, etc.
+- Even after elimination of low-variance features a strong over-fitting is still present. Perhaps eliminate even more features and compare fidelity of less complex models with models trained on the current subset of features and even full dataset.
+- Try more classification models. 
+- Try to tune more hyper-parameters, especially with SVC.
+- Contact the original authors and recalculate all data for duplicated URL entries from their intermediate data. It is quite possible that even the other data samples (not duplicated) also has features extracted incorrectly.
 
 #### Outline of project
 
 - [Link to notebook](capstone.ipynb)
-
-##### Contact and Further Information
-
-TBD
