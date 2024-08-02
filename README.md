@@ -64,18 +64,22 @@ During EDA phase a few surprising discoveries have been made however:
 - From a random sample of 5 supposedly phishing URLs only 2 were found on `phishtank.org` service. Ideally, we would need to cross validate them with other phishing URL providers.
 - Quite a bit of the "fine grained" features extracted from the HTML code are actually impractical. Technically speaking their variance is either zero or very low. They had to be dropped. Hence, 54 features became 38 features.
 
-The models were trained to minimize False Negatives (FN) -- classifying a malicious URL as benign. We want the users to be protected against security threats coming from malicious URLs. Hitting a False Positive (FP) -- classifying a benign URL as malicious is acceptable although it compromises system's UX. UX and Security simply lay on different sides of the spectrum. Building Security systems is a balancing act between secure users and happy users.
+The models were trained to minimize False Negatives (FN) -- classifying a malicious URL as benign. We want the users to be protected against security threats coming from malicious URLs. Hitting a False Positive (FP) -- classifying a benign URL as malicious is acceptable although it compromises system's UX. UX and Security simply sit on opposite sides of the spectrum. Building Security systems is a balancing act between secured users and happy users.
 
-Any classification model trained on the dataset is literally perfect regardless whether using default hyper-parameters or with hyper-parameter tuning. Models demonstrate incredible accuracy and recall scores. Too ideal to be true?...
+Any classification model trained on the dataset is literally perfect regardless whether using default hyper-parameters or with additional hyper-parameter tuning. Models demonstrate incredible accuracy and recall scores. Too ideal to be true?...
 
 Any classification model used in this exercise (excluding the baseline Dummy Classifier of course) can handle the task of URL qualification just fine. However Logistic Regression and SVC are best contenders for possible deployment with low False Negatives and reasonable training time.
+
+#### Conclusion
+
+Building a robust URL classification and conviction system is not impossible. Feature extraction techniques have improved over time. However, throwing way too many features into one bucket like with "PhiUSIIL" can lead to confused models and over-fitting. URL classification systems developed and adopted by a cyber security business need to carefully select features used for classification.  
 
 #### Next steps
 
 - Even after elimination of low-variance features a strong over-fitting is still present. Perhaps eliminate even more features and compare fidelity of less complex models with models trained on the current subset of features and even full dataset.
 - Try more classification models. 
 - Try to tune more hyper-parameters, especially with SVC.
-- Contact the original authors and recalculate all data for duplicated URL entries from their intermediate data. It is quite possible that even the other data samples (not duplicated) also has features extracted incorrectly.
+- Contact the original authors and recalculate all data for duplicated URL entries from their intermediate data. It is quite possible that even the other data samples (not duplicated) also have features extracted incorrectly.
 
 #### Outline of project
 
