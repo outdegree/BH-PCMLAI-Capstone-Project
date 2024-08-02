@@ -1,6 +1,19 @@
 ### Professional Certificate in Machine Learning and Artificial Intelligence - Capstone Project
 
 **Sebastian Krawczuk**
+<!-- TOC depthfrom:4 -->
+
+- [Executive summary](#executive-summary)
+- [Rationale](#rationale)
+- [Research Question](#research-question)
+- [Data Sources](#data-sources)
+- [Methodology](#methodology)
+- [Results](#results)
+- [Conclusion](#conclusion)
+- [Next Steps](#next-steps)
+- [Outline of Project](#outline-of-project)
+
+<!-- /TOC -->
 
 #### Executive summary
 
@@ -74,13 +87,13 @@ Any classification model used in this exercise (excluding the baseline Dummy Cla
 
 Building a robust URL classification and conviction system is not impossible. Feature extraction techniques have improved over time. However, throwing way too many features into one bucket like with "PhiUSIIL" can lead to confused models and over-fitting. URL classification systems developed and adopted by a cyber security business need to carefully select features used for classification.  
 
-#### Next steps
+#### Next Steps
 
 - Even after elimination of low-variance features a strong over-fitting is still present. Perhaps eliminate even more features and compare fidelity of less complex models with models trained on the current subset of features and even full dataset.
 - Try more classification models. 
 - Try to tune more hyper-parameters, especially with SVC.
 - Contact the original authors and recalculate all data for duplicated URL entries from their intermediate data. It is quite possible that even the other data samples (not duplicated) also have features extracted incorrectly.
 
-#### Outline of project
+#### Outline of Project
 
 - [Link to notebook](capstone.ipynb)
