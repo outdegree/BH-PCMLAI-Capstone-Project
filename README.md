@@ -3,7 +3,7 @@
 **Sebastian Krawczuk**
 <!-- TOC depthfrom:4 -->
 
-- [Executive summary](#executive-summary)
+- [Executive Summary](#executive-summary)
 - [Rationale](#rationale)
 - [Research Question](#research-question)
 - [Data Sources](#data-sources)
@@ -11,13 +11,13 @@
 - [Results](#results)
 - [Conclusion](#conclusion)
 - [Next Steps](#next-steps)
-- [Outline of Project](#outline-of-project)
+- [Outline of the Project](#outline-of-the-project)
 
 <!-- /TOC -->
 
-#### Executive summary
+#### Executive Summary
 
-This project tackles phishing website classification challenge.
+This project addresses the challenge of classifying phishing websites.
 
 #### Rationale
 
@@ -94,6 +94,6 @@ Building a robust URL classification and conviction system is not impossible. Fe
 - Try to tune more hyper-parameters, especially with SVC.
 - Contact the original authors and recalculate all data for duplicated URL entries from their intermediate data. It is quite possible that even the other data samples (not duplicated) also have features extracted incorrectly.
 
-#### Outline of Project
+#### Outline of the Project
 
 - [Link to notebook](capstone.ipynb)
